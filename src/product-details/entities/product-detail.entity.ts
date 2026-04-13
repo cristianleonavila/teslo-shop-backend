@@ -1,18 +1,18 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-
 @Entity()
-export class Product {
-
+export class ProductDetail {
+    
     @PrimaryGeneratedColumn('uuid')
     id!: string;
 
     @Column('varchar', {
-        unique: true, 
-        comment: 'Titulo del Producto',
         nullable: false
     })
-    title!: string;
+    productId!: string;
+
+    @Column('numeric', {default: 0, nullable: true})
+    price?: number;
 
     @Column('text', {nullable: true})
     description?: string;

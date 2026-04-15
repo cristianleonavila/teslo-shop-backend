@@ -11,7 +11,7 @@ export class ProductDetail {
     })
     productId!: string;
 
-    @Column('numeric', {default: 0, nullable: true})
+    @Column('numeric', {default: 0, nullable: false})
     price?: number;
 
     @Column('text', {nullable: true})
